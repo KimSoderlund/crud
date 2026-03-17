@@ -2,6 +2,8 @@ import { deleteBook } from './deleteBook.js';
 import { updateBook } from './updateBook.js';
 
 export async function getBooks() {
+    const bookList = document.getElementById('bookList');
+    bookList.innerHTML = '';
     try {
         const response = await fetch('http://localhost:3000/books');
         if (!response.ok) {
@@ -77,9 +79,10 @@ export async function getBooks() {
 
             bookElement.appendChild(deleteButton);
             bookElement.appendChild(updateButton);
-            document.body.appendChild(bookElement);
+            bookList.appendChild(bookElement);
         });
     } catch (error) {
         console.error(error);
     }
+
 }

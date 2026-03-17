@@ -2,15 +2,6 @@ GET en
  Hämta och visa ett specifikt objekt utifrån id.
 
 
-POST
- Skapa ett nytt objekt via formulär.
-
-
-PUT
- Uppdatera ett befintligt objekt.
-
-
-
 
 
 

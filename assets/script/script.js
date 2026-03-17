@@ -7,7 +7,9 @@ import './addBookOverlay.js';
 
 
 
-const printBookButton = document.getElementById('printBook');
-printBookButton.addEventListener('click', () => {
-getBooks();
-});
+// const printBookButton = document.getElementById('printBook');
+// printBookButton.addEventListener('click', () => {
+// getBooks();
+// });
+
+await getBooks();

@@ -1,53 +1,25 @@
 {
   "books": [
-    {
-      "title": "21 Lessons for the 21st Century",
-      "author": "Kim Den store",
-      "release_year": "2018",
-      "id": "3"
-    },
-    {
-      "title": "äkorv",
-      "author": "korvbagaren",
-      "release_year": 30000,
-      "id": "4"
-    },
-    {
-      "id": "5",
-      "title": "Animal Farm",
-      "author": "George Orwell",
-      "release_year": 1945
-    },
-    {
-      "title": "äkorv",
-      "author": "korvbagaren",
-      "release_year": 30000,
-      "id": "6"
-    },
-    {
-      "id": "7",
-      "title": "Pride and Prejudice",
-      "author": "Jane Austen",
-      "release_year": 1813
-    },
-    {
-      "id": "8",
-      "title": "Sense and Sensibility",
-      "author": "Jane Austen",
-      "release_year": 1811
-    },
-    {
-      "id": "9",
-      "title": "Emma",
-      "author": "Jane Austen",
-      "release_year": 1815
-    },
-    {
-      "id": "10",
-      "title": "Mansfield Park",
-      "author": "Jane Austen",
-      "release_year": 1814
-    }
+    {"id":"1","title":"Sapiens: En kort historik över mänskligheten","author":"Yuval Noah Harari","release_year":2011},
+    {"id":"2","title":"Homo Deus","author":"Yuval Noah Harari","release_year":2015},
+    {"id":"3","title":"21 Lessons for the 21st Century","author":"Yuval Noah Harari","release_year":2018},
+    {"id":"4","title":"1984","author":"George Orwell","release_year":1949},
+    {"id":"5","title":"Animal Farm","author":"George Orwell","release_year":1945},
+    {"id":"6","title":"Homage to Catalonia","author":"George Orwell","release_year":1938},
+    {"id":"7","title":"Pride and Prejudice","author":"Jane Austen","release_year":1813},
+    {"id":"8","title":"Sense and Sensibility","author":"Jane Austen","release_year":1811},
+    {"id":"9","title":"Emma","author":"Jane Austen","release_year":1815},
+    {"id":"10","title":"Mansfield Park","author":"Jane Austen","release_year":1814},
+    {"id":"11","title":"The Great Gatsby","author":"F. Scott Fitzgerald","release_year":1925},
+    {"id":"12","title":"Tender Is the Night","author":"F. Scott Fitzgerald","release_year":1934},
+    {"id":"13","title":"This Side of Paradise","author":"F. Scott Fitzgerald","release_year":1920},
+    {"id":"14","title":"Crime and Punishment","author":"Fyodor Dostoevsky","release_year":1866},
+    {"id":"15","title":"The Brothers Karamazov","author":"Fyodor Dostoevsky","release_year":1880},
+    {"id":"16","title":"The Idiot","author":"Fyodor Dostoevsky","release_year":1869},
+    {"id":"17","title":"Notes from Underground","author":"Fyodor Dostoevsky","release_year":1864},
+    {"id":"18","title":"War and Peace","author":"Leo Tolstoy","release_year":1869},
+    {"id":"19","title":"Anna Karenina","author":"Leo Tolstoy","release_year":1877},
+    {"id":"20","title":"The Death of Ivan Ilyich","author":"Leo Tolstoy","release_year":1886}
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
