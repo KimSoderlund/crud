@@ -1,0 +1,41 @@
+Grundkrav
+Git och Github har använts 
+Applikationen ska vara byggd i HTML, CSS och JavaScript.
+Du ska använda json-server som backend.
+Du ska använda fetch för att kommunicera med ditt API.
+Du ska välja en resurs att arbeta med, till exempel böcker, filmer, recept eller liknande.
+Varje objekt i resursen ska innehålla minst 3 egenskaper utöver id.
+
+
+
+
+CRUD-krav
+Din applikation ska minst innehålla följande funktioner:
+GET alla
+ Hämta och visa alla objekt i resursen.
+
+
+GET en
+ Hämta och visa ett specifikt objekt utifrån id.
+
+
+POST
+ Skapa ett nytt objekt via formulär.
+
+
+PUT
+ Uppdatera ett befintligt objekt.
+
+
+DELETE
+ Ta bort ett objekt.
+
+
+UI-krav
+Det ska finnas ett tydligt gränssnitt där användaren kan använda alla funktioner.
+
+
+Det ska gå att förstå vad applikationen gör och hur den används.
+
+
+Informationen från API:t ska presenteras på ett tydligt sätt.
