@@ -1,16 +1,16 @@
 {
   "books": [
     {
-      "id": "3",
       "title": "21 Lessons for the 21st Century",
-      "author": "Yuval Noah Harari",
-      "release_year": 2018
+      "author": "Kim Den store",
+      "release_year": "2018",
+      "id": "3"
     },
     {
-      "id": "4",
-      "title": "1984",
-      "author": "George Orwell",
-      "release_year": 1949
+      "title": "äkorv",
+      "author": "korvbagaren",
+      "release_year": 30000,
+      "id": "4"
     },
     {
       "id": "5",
@@ -19,10 +19,10 @@
       "release_year": 1945
     },
     {
-      "id": "6",
-      "title": "Homage to Catalonia",
-      "author": "George Orwell",
-      "release_year": 1938
+      "title": "äkorv",
+      "author": "korvbagaren",
+      "release_year": 30000,
+      "id": "6"
     },
     {
       "id": "7",

@@ -2,7 +2,6 @@ import { addBook } from './addBook.js';
 
 const addBookButton = document.getElementById('addBook');
 addBookButton.addEventListener('click', () => {
-    console.log('Add Book button clicked');
 
     const addBookOverlay = document.createElement('div');
     addBookOverlay.id = 'addBookOverlay';

@@ -5,5 +5,4 @@ export async function deleteBook(id) {
     if (!response.ok) {
         throw new Error('Network response was not ok');
     }
-    console.log(`Book with id ${id} deleted`);
 }
