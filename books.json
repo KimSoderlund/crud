@@ -47,12 +47,6 @@
       "title": "Mansfield Park",
       "author": "Jane Austen",
       "release_year": 1814
-    },
-    {
-      "id": "27ff",
-      "title": "asd",
-      "author": "asd",
-      "release_year": "123"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

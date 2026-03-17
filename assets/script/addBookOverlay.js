@@ -4,7 +4,7 @@ const addBookButton = document.getElementById('addBook');
 addBookButton.addEventListener('click', () => {
     console.log('Add Book button clicked');
 
-    const addBookOverlay = document.createElement('form');
+    const addBookOverlay = document.createElement('div');
     addBookOverlay.id = 'addBookOverlay';
     
     const bookTitleInput = document.createElement('input');
@@ -27,7 +27,6 @@ addBookButton.addEventListener('click', () => {
         const author = bookAuthorInput.value;
         const releaseYear = bookReleaseYearInput.value;
         if (!title || !author || !releaseYear) {
-            alert('Please fill in all fields');
             return;
         } else {
             try {
@@ -39,9 +38,17 @@ addBookButton.addEventListener('click', () => {
             }
         }
     });
+
+    const cancelButton = document.createElement('button');
+    cancelButton.textContent = 'Cancel';
+    cancelButton.addEventListener('click', () => {
+        document.body.removeChild(addBookOverlay);
+    });
+
     addBookOverlay.appendChild(bookTitleInput);
     addBookOverlay.appendChild(bookAuthorInput);
     addBookOverlay.appendChild(bookReleaseYearInput);
     addBookOverlay.appendChild(submitButton);
+    addBookOverlay.appendChild(cancelButton);
     document.body.appendChild(addBookOverlay);
 });
