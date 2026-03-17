@@ -1,12 +1,6 @@
 {
   "books": [
     {
-      "id": "1",
-      "title": "Sapiens: En kort historik över mänskligheten",
-      "author": "Yuval Noah Harari",
-      "release_year": 2011
-    },
-    {
       "id": "3",
       "title": "21 Lessons for the 21st Century",
       "author": "Yuval Noah Harari",
@@ -53,6 +47,12 @@
       "title": "Mansfield Park",
       "author": "Jane Austen",
       "release_year": 1814
+    },
+    {
+      "id": "27ff",
+      "title": "asd",
+      "author": "asd",
+      "release_year": "123"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
