@@ -1,10 +1,10 @@
 {
   "books": [
     {
-      "id": "2",
-      "title": "Homo Deus",
+      "id": "1",
+      "title": "Sapiens: En kort historik över mänskligheten",
       "author": "Yuval Noah Harari",
-      "release_year": 2015
+      "release_year": 2011
     },
     {
       "id": "3",
@@ -13,28 +13,46 @@
       "release_year": 2018
     },
     {
-      "id": "1f4e",
-      "title": "Sapiens: En kort historik över mänskligheten",
-      "author": "Yuval Noah Harari",
-      "release_year": 2011
+      "id": "4",
+      "title": "1984",
+      "author": "George Orwell",
+      "release_year": 1949
     },
     {
-      "id": "0aec",
-      "title": "Sapiens: En kort historik över mänskligheten",
-      "author": "Yuval Noah Harari",
-      "release_year": 2011
+      "id": "5",
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "release_year": 1945
     },
     {
-      "id": "0b5a",
-      "title": "Sapiens: En kort historik över mänskligheten",
-      "author": "Yuval Noah Harari",
-      "release_year": 2011
+      "id": "6",
+      "title": "Homage to Catalonia",
+      "author": "George Orwell",
+      "release_year": 1938
     },
     {
-      "id": "4ccf",
-      "title": "Sapiens: En kort historik över mänskligheten",
-      "author": "Yuval Noah Harari",
-      "release_year": 2011
+      "id": "7",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "release_year": 1813
+    },
+    {
+      "id": "8",
+      "title": "Sense and Sensibility",
+      "author": "Jane Austen",
+      "release_year": 1811
+    },
+    {
+      "id": "9",
+      "title": "Emma",
+      "author": "Jane Austen",
+      "release_year": 1815
+    },
+    {
+      "id": "10",
+      "title": "Mansfield Park",
+      "author": "Jane Austen",
+      "release_year": 1814
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
