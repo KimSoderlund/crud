@@ -3,6 +3,7 @@ import { updateBook } from './updateBook.js';
 
 export async function getBooks() {
     const bookList = document.getElementById('bookList');
+    const overlayContainer = document.getElementById('overlayContainer');
     bookList.innerHTML = '';
     try {
         const response = await fetch('http://localhost:3000/books');
@@ -12,7 +13,15 @@ export async function getBooks() {
         const books = await response.json();
         books.forEach(book => {
             const bookElement = document.createElement('div');
-            bookElement.textContent = `${book.title} by ${book.author} (${book.release_year})`;
+            bookElement.className = 'book-card';
+
+            const bookTitle = document.createElement('div');
+            bookTitle.className = 'book-title';
+            bookTitle.textContent = `${book.title} (${book.release_year}), ${book.author}`;
+
+            const bookArt = document.createElement('div');
+            bookArt.className = 'book-art';
+            bookArt.textContent = `Art#:${book.id}`;
 
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Delete';
@@ -24,8 +33,10 @@ export async function getBooks() {
             const updateButton = document.createElement('button');
             updateButton.textContent = 'Update';
             updateButton.addEventListener('click', () => {
+                overlayContainer.innerHTML = '';
                 const changeBookOverlay = document.createElement('div');
                 changeBookOverlay.id = 'changeBookOverlay';
+                changeBookOverlay.className = 'overlay';
                 
                 const bookTitleInput = document.createElement('input');
                 bookTitleInput.value = book.title;
@@ -52,9 +63,10 @@ export async function getBooks() {
                             return;
                         } else {
                             try {
-                                const newBook = await updateBook(book.id, author, title, releaseYear);
-                                console.log('Book updated:', newBook);
-                                document.body.removeChild(changeBookOverlay);
+                                const updatedBook = await updateBook(book.id, author, title, releaseYear);
+                                bookTitle.textContent = `${updatedBook.title} (${updatedBook.release_year}), ${updatedBook.author}`;
+                                bookArt.textContent = `Art#:${updatedBook.id}`;
+                                overlayContainer.removeChild(changeBookOverlay);
                             } catch (error) {
                                 console.error('Error updating book:', error);
                             }
@@ -64,21 +76,25 @@ export async function getBooks() {
                     const cancelButton = document.createElement('button');
                     cancelButton.textContent = 'Cancel';
                     cancelButton.addEventListener('click', () => {
-                        document.body.removeChild(changeBookOverlay);
+                        overlayContainer.removeChild(changeBookOverlay);
                     });
-
-                    changeBookOverlay.appendChild(submitButton);
-                    changeBookOverlay.appendChild(cancelButton);
 
                 changeBookOverlay.appendChild(bookTitleInput);
                 changeBookOverlay.appendChild(bookAuthorInput);
                 changeBookOverlay.appendChild(bookReleaseYearInput);
-                document.body.appendChild(changeBookOverlay);
-                // await updateBook(book.id, 'korvbagaren', 'äkorv', 30000);
+                changeBookOverlay.appendChild(submitButton);
+                changeBookOverlay.appendChild(cancelButton);
+                overlayContainer.appendChild(changeBookOverlay);
             });
 
-            bookElement.appendChild(deleteButton);
-            bookElement.appendChild(updateButton);
+            const bookActions = document.createElement('div');
+            bookActions.className = 'book-actions';
+            bookActions.appendChild(deleteButton);
+            bookActions.appendChild(updateButton);
+
+            bookElement.appendChild(bookTitle);
+            bookElement.appendChild(bookArt);
+            bookElement.appendChild(bookActions);
             bookList.appendChild(bookElement);
         });
     } catch (error) {

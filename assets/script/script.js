@@ -7,9 +7,18 @@ import './addBookOverlay.js';
 
 
 
-// const printBookButton = document.getElementById('printBook');
-// printBookButton.addEventListener('click', () => {
-// getBooks();
-// });
-
 await getBooks();
+
+const searchBtn = document.getElementById('searchBtn');
+const searchInput = document.getElementById('searchInput');
+
+searchBtn.addEventListener('click', async () => {
+	const id = searchInput.value.trim();
+
+	if (!id) {
+		await getBooks();
+		return;
+	}
+
+	await findBook(id);
+});

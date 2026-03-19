@@ -2,9 +2,12 @@ import { addBook } from './addBook.js';
 
 const addBookButton = document.getElementById('addBook');
 addBookButton.addEventListener('click', () => {
+    const overlayContainer = document.getElementById('overlayContainer');
+    overlayContainer.innerHTML = '';
 
     const addBookOverlay = document.createElement('div');
     addBookOverlay.id = 'addBookOverlay';
+    addBookOverlay.className = 'overlay';
     
     const bookTitleInput = document.createElement('input');
     bookTitleInput.placeholder = 'Book Title';
@@ -30,8 +33,7 @@ addBookButton.addEventListener('click', () => {
         } else {
             try {
                 const newBook = await addBook(author, title, releaseYear);
-                console.log('New book added:', newBook);
-                document.body.removeChild(addBookOverlay);
+                overlayContainer.removeChild(addBookOverlay);
             } catch (error) {
                 console.error('Error adding book:', error);
             }
@@ -41,7 +43,7 @@ addBookButton.addEventListener('click', () => {
     const cancelButton = document.createElement('button');
     cancelButton.textContent = 'Cancel';
     cancelButton.addEventListener('click', () => {
-        document.body.removeChild(addBookOverlay);
+        overlayContainer.removeChild(addBookOverlay);
     });
 
     addBookOverlay.appendChild(bookTitleInput);
@@ -49,5 +51,5 @@ addBookButton.addEventListener('click', () => {
     addBookOverlay.appendChild(bookReleaseYearInput);
     addBookOverlay.appendChild(submitButton);
     addBookOverlay.appendChild(cancelButton);
-    document.body.appendChild(addBookOverlay);
+    overlayContainer.appendChild(addBookOverlay);
 });
